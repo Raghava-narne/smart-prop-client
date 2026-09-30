@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  color: #17252d;
+  background: #f4f7f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, select { font: inherit; }
+button:disabled { cursor: not-allowed; opacity: .62; }
+
+.font-display { font-family: "Manrope", "DM Sans", ui-sans-serif, system-ui, sans-serif; }
+.panel-card { border: 1px solid #edf1ef; border-radius: 18px; background: #fff; box-shadow: 0 8px 30px rgba(23, 37, 45, .045); }
+.eyebrow { color: #16876c; font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.button-primary { display: inline-flex; align-items: center; gap: 9px; border: 0; border-radius: 11px; background: #16876c; padding: 10px 15px; color: #fff; font-size: 12px; font-weight: 700; transition: background .16s, transform .16s; }
+.button-primary:hover { background: #0f7059; transform: translateY(-1px); }
+.button-secondary { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #e6ece9; border-radius: 11px; background: white; padding: 10px 14px; color: #33464c; font-size: 12px; font-weight: 700; transition: background .15s; }
+.button-secondary:hover { background: #f8faf9; }
+.field-label { display: flex; flex-direction: column; gap: 8px; color: #33464c; font-size: 11px; font-weight: 700; }
+.field-wrap { display: flex; min-height: 46px; align-items: center; gap: 10px; border: 1px solid #e7ecea; border-radius: 11px; background: #fff; padding: 0 13px; color: #91a0a3; transition: border .15s, box-shadow .15s; }
+.field-wrap:focus-within { border-color: #5cae94; box-shadow: 0 0 0 3px rgba(22, 135, 108, .09); }
+.field-wrap input, .field-wrap select { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: #17252d; font-size: 12px; }
+.field-wrap input::placeholder { color: #aab4b4; }
+.field-wrap select:invalid { color: #aab4b4; }
+.page-loader { display: grid; min-height: 100vh; place-items: center; background: #f4f7f6; }
+.spinner { width: 30px; height: 30px; border: 3px solid #d9e7e2; border-top-color: #16876c; border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
